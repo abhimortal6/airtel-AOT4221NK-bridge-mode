@@ -486,13 +486,9 @@ def run(args):
         print("[+] Done! The router accepted the command and is rebooting now.")
     print("    Do NOT unplug the router while it restarts.")
     if want_bridge:
-        print("\nNext steps (see README, step 6):\n"
-              "  1. Plug your own router's WAN/Internet port into a LAN port of the Nokia.\n"
-              "  2. On your own router, set the internet type to PPPoE and enter your\n"
-              "     Airtel broadband username and password.\n"
-              "  3. The Nokia's settings page will now be at a NEW address handed out by\n"
-              "     your own router. Find it in your router's device list if you ever\n"
-              "     want to run --disable.")
+        print("\nNext: plug your own router's WAN/Internet port into a LAN port of the Nokia.\n"
+              "The Nokia's settings page will be at a NEW address given by your own router\n"
+              "(see its device list) if you ever want to run --disable.")
     return EXIT_OK
 
 

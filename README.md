@@ -17,7 +17,7 @@ You need:
    - **Mac / Linux:** open Terminal, type `sh ` (with a space), drag `run-mac-linux.sh` into the window, and press Enter.
 4. Press **Enter** for the username, type the **dashboard password from the back of the router** (it stays hidden while you type), then type **`y`** to confirm.
 5. Wait **3 minutes** while the Nokia restarts. Don't unplug it.
-6. Plug a cable from a **Nokia LAN port** into your **own router's WAN/Internet port**. In your own router's settings, choose **PPPoE** and enter your Airtel broadband username and password (ask Airtel customer care if you don't have them).
+6. Plug a cable from a **Nokia LAN port** into your **own router's WAN/Internet port**.
 
 Done. 🎉
 
@@ -39,7 +39,6 @@ Can't find it? A factory reset (hold the reset hole for about 10 seconds) should
 |---|---|
 | `Could not reach the router` | You're not connected to the Nokia, or it's at another address. Add `--ip <address>`. |
 | `Login failed` | Wrong password. Use the dashboard password on the back of the router. After a few wrong tries, wait a few minutes. |
-| Internet doesn't work after the switch | Recheck the Airtel username and password on your own router. If they're definitely right, set VLAN ID `100` on your router's WAN page. |
 
 It's your own router, so it's at your own risk. The tool only changes the router mode. Nothing else.
 
