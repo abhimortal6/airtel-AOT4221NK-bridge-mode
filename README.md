@@ -5,9 +5,9 @@ Turns on the hidden **bridge mode** on the Airtel **Nokia AOT4221NK** router (ch
 ## Before you start
 
 You need:
+- **The Nokia's dashboard password.** It's written on the **back of the router** (unless you changed it). This is the password the tool asks for.
 - **Your own router** (TP-Link, ASUS, etc.)
-- **Your Airtel broadband username and password.** Ask Airtel customer care for these. They are *not* the router's admin password. Without them you'll have no internet after the switch.
-- **The Nokia's admin password.** It's the one you use at `https://192.168.1.1`. If you never changed it, it's the serial number on the sticker.
+- **Your Airtel broadband (PPPoE) username and password**, for setting up your own router in step 6. Ask Airtel customer care if you don't have them.
 
 ## Steps
 
@@ -16,7 +16,7 @@ You need:
 3. **Run it:**
    - **Windows:** double-click `run-windows.bat`
    - **Mac / Linux:** open Terminal, type `sh ` (with a space), drag `run-mac-linux.sh` into the window, and press Enter.
-4. Press **Enter** for the username, type your **admin password** (it stays hidden while you type), then type **`y`** to confirm.
+4. Press **Enter** for the username, type the **dashboard password from the back of the router** (it stays hidden while you type), then type **`y`** to confirm.
 5. Wait **3 minutes** while the Nokia restarts. Don't unplug it.
 6. Plug a cable from a **Nokia LAN port** into your **own router's WAN/Internet port**. In your router's settings, choose **PPPoE** and enter your Airtel username and password.
 
@@ -39,7 +39,7 @@ Can't find it? A factory reset (hold the reset hole for about 10 seconds) should
 | You see | Do this |
 |---|---|
 | `Could not reach the router` | You're not connected to the Nokia, or it's at another address. Add `--ip <address>`. |
-| `Login failed` | Wrong admin password. After a few wrong tries, wait a few minutes. |
+| `Login failed` | Wrong password. Use the dashboard password on the back of the router. After a few wrong tries, wait a few minutes. |
 | Internet doesn't work after the switch | Recheck the Airtel username and password on your own router. If they're definitely right, set VLAN ID `100` on your router's WAN page. |
 
 It's your own router, so it's at your own risk. The tool only changes the router mode. Nothing else.

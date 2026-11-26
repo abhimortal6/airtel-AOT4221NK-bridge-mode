@@ -340,10 +340,9 @@ class Router:
             self.token = str(data.get("token") or "")
             return
         msg = data.get("error_msg") or data.get("tip") or data.get("reason") or _short(text)
-        hint = ("\n    Check the username and password (the same ones you use on the router's\n"
-                "    web page). After a factory reset the admin password is the serial number\n"
-                "    on the router's sticker. Several wrong tries in a row can lock the login\n"
-                "    for a few minutes.")
+        hint = ("\n    Use the router's dashboard password: the one written on the back of\n"
+                "    the router (or your own, if you changed it). Several wrong tries in a\n"
+                "    row can lock the login for a few minutes.")
         raise RouterError("Login failed: %s%s" % (msg, hint))
 
     def get_mode(self):
@@ -429,12 +428,13 @@ def run(args):
 
     try:
         username = args.username or input("Router username [admin]: ").strip() or "admin"
-        password = args.password if args.password is not None else getpass.getpass("Router password: ")
+        password = args.password if args.password is not None else getpass.getpass(
+            "Router dashboard password (written on the back of the router): ")
     except EOFError:
         print("[!] No username/password given.")
         return EXIT_USAGE
     if not password:
-        print("[!] The password is empty. Run the script again and type your router password.")
+        print("[!] The password is empty. Run the script again and type the router dashboard password.")
         return EXIT_USAGE
 
     print("[*] Connecting to the router at https://%s ..." % router.address)
