@@ -5,9 +5,8 @@ Turns on the hidden **bridge mode** on the Airtel **Nokia AOT4221NK** router (ch
 ## Before you start
 
 You need:
-- **The Nokia's dashboard password.** It's written on the **back of the router** (unless you changed it). This is the password the tool asks for.
+- **The Nokia's dashboard password.** It's written on the **back of the router** (unless you changed it).
 - **Your own router** (TP-Link, ASUS, etc.)
-- **Your Airtel broadband (PPPoE) username and password**, for setting up your own router in step 6. Ask Airtel customer care if you don't have them.
 
 ## Steps
 
@@ -18,7 +17,7 @@ You need:
    - **Mac / Linux:** open Terminal, type `sh ` (with a space), drag `run-mac-linux.sh` into the window, and press Enter.
 4. Press **Enter** for the username, type the **dashboard password from the back of the router** (it stays hidden while you type), then type **`y`** to confirm.
 5. Wait **3 minutes** while the Nokia restarts. Don't unplug it.
-6. Plug a cable from a **Nokia LAN port** into your **own router's WAN/Internet port**. In your router's settings, choose **PPPoE** and enter your Airtel username and password.
+6. Plug a cable from a **Nokia LAN port** into your **own router's WAN/Internet port**. In your own router's settings, choose **PPPoE** and enter your Airtel broadband username and password (ask Airtel customer care if you don't have them).
 
 Done. 🎉
 
